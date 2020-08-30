@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #6d708d;
+  background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
+  background-position: right top, left bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #f6f6fe;
+}
+
+.wrapper {
+  padding: 2.5em 1.2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper header h1 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.wrapper header .full-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.wrapper header .full-switcher p {
+  color: #b3b5c6;
+  font-size: .7em;
+}
+
+.wrapper header .full-switcher .switch {
+  margin: 0 1em;
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+}
+
+.wrapper header .full-switcher .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.wrapper header .full-switcher .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#dcdef9), to(#b0b3ed));
+  background-image: linear-gradient(to right, #dcdef9, #b0b3ed);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.wrapper header .full-switcher .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.wrapper header .full-switcher input:checked + .slider {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.wrapper header .full-switcher input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.wrapper header .full-switcher .slider.round {
+  border-radius: 34px;
+}
+
+.wrapper header .full-switcher .slider.round:before {
+  border-radius: 50%;
+}
+
+.wrapper main .pack {
+  border-radius: 10px;
+  padding: 1em;
+  margin: 0 auto 1.5em;
+  width: 18em;
+  height: 23em;
+}
+
+.wrapper main .pack h5 {
+  margin: .5em 0 0;
+  font-size: 1em;
+  color: #b3b5c6;
+}
+
+.wrapper main .pack button {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: .7em 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper main .pack .pack-price {
+  font-size: 3em;
+  font-weight: 800;
+  margin: .4em 0;
+}
+
+.wrapper main .pack .pack-info {
+  border-top: 1px solid #b3b5c6;
+  padding: .6em 0;
+  color: #6d708d;
+}
+
+.wrapper main .pack .last {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+.wrapper main .pack .pack-infos {
+  margin: 1em 0;
+}
+
+.wrapper main .light {
+  background-color: white;
+}
+
+.wrapper main .light button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+}
+
+.wrapper main .dark {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+}
+
+.wrapper main .dark h5 {
+  color: white;
+}
+
+.wrapper main .dark .pack-info {
+  color: white;
+}
+
+.wrapper main .dark button {
+  background-color: white;
+  color: #696fdd;
+}
+
+@media (min-width: 900px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 4em;
+  }
+  main .pack {
+    margin: 0;
+  }
+  main #dark {
+    padding: 2em 1em;
+    width: 21em;
+    height: 25em;
+  }
+  footer {
+    margin-top: 4em;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
